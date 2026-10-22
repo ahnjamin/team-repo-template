@@ -1,0 +1,38 @@
+# 팀플용 레포 템플릿
+
+1~2달짜리 팀 프로젝트를 시작할 때 복사해 쓰는 GitHub 레포 틀이다. 팀이 정한 것과 각자 하는 일을 레포 안에 적어 두면, 팀원도 팀원이 쓰는 AI(Claude Code, Codex, Cursor 등)도 같은 내용을 보고 일한다.
+
+## 이 템플릿으로 새 레포 만들기
+
+웹에서는 이 레포 위쪽의 "Use this template" 버튼을 누른다.
+
+터미널에서는 이렇게 한다.
+
+```bash
+gh repo create 프로젝트-이름 --private --template ahnjamin/team-repo-template --clone
+```
+
+만든 뒤에는 이 README의 제목과 소개를 우리 프로젝트 내용으로 바꾼다. "이 템플릿으로 새 레포 만들기" 부분은 지운다.
+
+## 폴더
+
+- `AGENTS.md`: AI가 이 레포에서 일을 시작할 때 먼저 읽는 안내문이다. 작업 전에 무엇을 읽을지, 결정은 어디에 적을지, 하면 안 되는 일을 적었다.
+- `CLAUDE.md`: Claude Code가 읽는 파일이다. AGENTS.md를 따르라는 한 줄만 있다.
+- `docs/INDEX.md`: 문서 목록
+- `docs/decisions/`: 팀이 정한 것과 그 이유. `_template.md`를 복사해서 쓴다.
+- `docs/meetings/`: 회의록. 회의 녹음을 받아 적은 글을 날짜 이름으로 둔다.
+- `members/<이름>/`: 각자 자유롭게 쓰는 곳이다. 코드, 메모, 실험을 둔다. 안의 구조는 정하지 않았다.
+
+## 시작하기
+
+1. `members/` 안에 자기 이름으로 폴더를 만든다.
+2. 그 안에 `README.md`를 두고 지금 하는 일을 몇 줄 적어 두면 팀원과 AI가 내 상황을 알 수 있다. (선택)
+3. 큰 데이터 파일은 git에 올리지 않는다. 원본은 공유 드라이브에 두고 위치만 적는다. `data/` 폴더와 csv·xlsx·zip·parquet 파일은 `.gitignore`로 빠진다. 이름에 `sample`이 들어간 파일만 올라간다.
+
+## 브랜치와 PR 규칙
+
+1. `main`에 직접 push하지 않는다.
+2. 작업마다 브랜치를 만든다. 이름은 `이름/작업`으로 한다. (예: `jaemin/login-api`)
+3. PR을 올리고 팀원 한 명이 확인한 뒤 merge한다.
+
+GitHub 레포의 Settings → Branches(또는 Rules)에서 `main` 보호를 켜 두면 1번과 3번이 자동으로 지켜진다. 무료 계정의 비공개 레포에서는 이 설정을 쓸 수 없으니 팀원끼리 규칙으로 지킨다.

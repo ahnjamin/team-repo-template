@@ -1,0 +1,20 @@
+# 비밀 정보
+.env
+.env.*
+*.pem
+*.key
+
+# 큰 데이터 (data/ 폴더는 통째로 제외. 그 밖의 csv·xlsx·zip·parquet은 이름에 sample이 있을 때만 올라감)
+data/
+*.csv
+*.xlsx
+*.zip
+*.parquet
+!*sample*
+
+# 기타
+.DS_Store
+node_modules/
+__pycache__/
+.venv/
+.obsidian/

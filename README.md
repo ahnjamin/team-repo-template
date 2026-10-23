@@ -16,8 +16,7 @@ gh repo create 프로젝트-이름 --private --template ahnjamin/team-repo-templ
 
 ## 폴더
 
-- `AGENTS.md`: AI가 이 레포에서 일을 시작할 때 먼저 읽는 안내문이다. 작업 전에 무엇을 읽을지, 결정은 어디에 적을지, 하면 안 되는 일을 적었다.
-- `CLAUDE.md`: Claude Code가 읽는 파일이다. AGENTS.md를 따르라는 한 줄만 있다.
+- `AGENTS.md`: AI가 이 레포에서 일을 시작할 때 먼저 읽는 안내문이다. 작업 전에 무엇을 읽을지, 결정은 어디에 적을지, 하면 안 되는 일을 적었다. Claude Code(v2.1.277 이상), Codex, Cursor가 모두 이 파일을 읽는다. 레포에 `CLAUDE.md`를 만들면 Claude Code는 AGENTS.md 대신 그 파일만 읽으니 만들지 않는다.
 - `docs/INDEX.md`: 문서 목록
 - `docs/decisions/`: 팀이 정한 것과 그 이유. `_template.md`를 복사해서 쓴다.
 - `docs/meetings/`: 회의록. 회의 녹음을 받아 적은 글을 날짜 이름으로 둔다.
